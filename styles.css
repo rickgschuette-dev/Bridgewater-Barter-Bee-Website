@@ -66,3 +66,33 @@ footer a{color:var(--gold)}
   .steps{grid-template-columns:1fr}
 }
 @media (max-width:520px){ .tiles{grid-template-columns:1fr} .nav a{padding:.8rem .8rem} }
+
+/* Listing photos */
+.card img.photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:.7rem}
+.photo-placeholder{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:#f0ead8;border:2px dashed var(--line);border-radius:6px;color:var(--muted);margin-bottom:.7rem;font-size:.95rem}
+footer br{display:block}
+
+/* Buttons and posting form */
+.button{display:inline-block;background:var(--charcoal);color:var(--gold);font:inherit;font-weight:700;text-decoration:none;padding:.75rem 1.4rem;border:3px solid var(--gold);border-radius:8px;cursor:pointer}
+.button:hover{background:var(--charcoal-deep)}
+.button.alt{background:#fff;color:var(--charcoal);border-color:var(--charcoal)}
+.notice{background:#fff4e0;border-left:8px solid var(--coral);border-radius:6px;padding:.8rem 1.2rem;margin-bottom:1.5rem}
+.postform{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.4rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-weight:700;margin-bottom:.3rem}
+.opt{font-weight:400;color:var(--muted);font-size:.9rem}
+.field input[type=text],.field select,.field textarea,.field input[type=file]{width:100%;font:inherit;padding:.65rem .8rem;border:2px solid #9aa2a6;border-radius:6px;background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--blue);border-color:var(--charcoal)}
+.field.check{display:flex;gap:.7rem;align-items:flex-start}
+.field.check input{width:1.4rem;height:1.4rem;margin-top:.25rem;flex:none}
+.field.check label{font-weight:400;margin:0}
+.result{background:#eef6fa;border-left:8px solid var(--blue);border-radius:6px;padding:.8rem 1.2rem;margin-top:1.2rem}
+.addr{font-weight:700;font-size:1.15rem;word-break:break-word}
+.small{font-size:.92rem;color:var(--muted)}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+
+/* Post a Listing tab */
+.nav li:last-child a{background:var(--gold);color:var(--charcoal-deep);margin-left:.6rem;border-radius:6px 6px 0 0}
+.nav li:last-child a:hover{background:#ffd27a;border-bottom-color:var(--coral)}
+.nav li:last-child a[aria-current="page"]{color:var(--charcoal-deep);border-bottom-color:var(--coral)}

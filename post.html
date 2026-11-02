@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post a Listing | Bridgewater Barter Bee</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="banner"><a href="index.html"><img src="images/banner.jpg" alt="Bridgewater Barter Bee – Your Community Trade &amp; Sell"></a></header>
+<nav class="nav" aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="for-sale.html">Items For Sale</a></li><li><a href="free.html">Items for Free</a></li><li><a href="trade.html">Items for Trade</a></li><li><a href="services.html">Services Offered</a></li><li><a href="post.html" aria-current="page">Post a Listing</a></li></ul></nav>
+<main>
+<h1>Post a Listing</h1>
+<div class="notice" role="note"><strong>Preview only.</strong> This form is not connected yet. Nothing you enter is sent or saved.</div>
+<div class="intro">
+<form id="postform" class="postform">
+<div class="grid2">
+<div class="field"><label for="cat">Category</label>
+<select id="cat" required><option value="">Choose one…</option><option>Items For Sale</option><option>Items for Free</option><option>Items for Trade</option><option>Services Offered</option></select></div>
+<div class="field"><label for="title">Item or service</label><input id="title" type="text" required placeholder="For example: Three-shelf bookcase"></div>
+</div>
+<div class="field"><label for="desc">Short description</label><textarea id="desc" rows="4" required placeholder="Condition, size, and anything a neighbor should know"></textarea></div>
+<div class="grid2">
+<div class="field"><label for="price">Asking price, or what you would like in return <span class="opt">(optional)</span></label><input id="price" type="text" placeholder="For example: $35, or jigsaw puzzles"></div>
+<div class="field"><label for="photo">Photo <span class="opt">(optional)</span></label><input id="photo" type="file" accept="image/*"></div>
+</div>
+<div class="grid2">
+<div class="field"><label for="name">Your first name</label><input id="name" type="text" required autocomplete="given-name"></div>
+<div class="field"><label for="how">How should neighbors contact you?</label>
+<select id="how" required><option value="">Choose one…</option><option>Text message</option><option>Email</option></select></div>
+</div>
+<div class="field"><label for="contact">Your text number or email address</label><input id="contact" type="text" required placeholder="For example: 321-555-0100 or name@example.com"></div>
+<div class="field check"><input id="agree" type="checkbox" required><label for="agree">I understand that all trading, buying, and selling takes place between individuals, after formal contact by text or email to arrange a meeting.</label></div>
+<button class="button" type="submit">Submit My Listing</button>
+<p id="preview-result" class="result" role="status" hidden><strong>Preview only:</strong> nothing was sent. At launch, this button will deliver your listing to the marketplace moderator.</p>
+</form>
+<aside>
+<div class="rule"><h2>Prefer email?</h2>
+<p>Send your listing to:</p>
+<p class="addr">[MARKETPLACE EMAIL – to be confirmed]</p>
+<p><a class="button alt" href="mailto:?subject=Barter%20Bee%20listing&amp;body=Category%3A%20%0AItem%20or%20service%3A%20%0AShort%20description%3A%20%0AAsking%20price%20or%20what%20you%20would%20like%20in%20return%3A%20%0AYour%20first%20name%3A%20%0AHow%20neighbors%20should%20contact%20you%3A%20">Start an Email</a></p>
+<p class="small">The button opens an email with the questions already filled in. If it does not open, copy the address above into any email service.</p>
+<p class="small">A photo is welcome. Attach it, and photograph items against a plain wall or in a garage so that your home’s interior does not show.</p>
+</div>
+</aside>
+</div>
+<script>
+document.getElementById("postform").addEventListener("submit",function(e){e.preventDefault();var r=document.getElementById("preview-result");r.hidden=false;r.scrollIntoView({behavior:"smooth",block:"center"});});
+</script>
+</main>
+<footer>An independent, neighbor-run marketplace, not affiliated with the Bridgewater HOA or its Board.<br>Transactions are arranged solely between individual residents. [MARKETPLACE EMAIL – to be confirmed]</footer>
+</body>
+</html>
